@@ -120,6 +120,11 @@
       & h6 {
         font-size: 14px;
       }
+
+      a {
+        font-weight: 500;
+        color: $heading-color;
+      }
     }
     &-4 {
       padding: 19px 0;
@@ -195,7 +200,7 @@
         right: 0;
         border: none;
         height: 50px;
-        color: $black;
+        color: $white;
         display: block;
         line-height: 50px;
         padding: 0 65px;
@@ -389,157 +394,6 @@
             }
           }
         }
-      }
-    }
-  }
-}
-
-/* yellow header css start */
-.yellow-header {
-  background: $t-yellow;
-  & .header__info {
-    border-color: #d69c00;
-  }
-  & .header__welcome {
-    & span {
-      color: $black;
-    }
-  }
-  & .header__action ul li {
-    &::after {
-      background: #d69c00;
-    }
-    & a {
-      color: $black;
-      &:hover {
-        color: $white;
-      }
-    }
-    &::after {
-      background: #d69c00;
-    }
-  }
-  & .header__hotline-icon i {
-    color: $black;
-  }
-  & .header__hotline-info span {
-    color: $black;
-  }
-  & .header__search-box button {
-    background: $black;
-    color: $white;
-  }
-  & .cart__toggle {
-    border-color: #d69c00;
-    &:hover {
-      border-color: $white;
-    }
-  }
-  & .cart__toggle.cart__toggle-open {
-    background: transparent;
-    color: #ffffff;
-    border-color: #fff;
-  }
-  & .cart__total-item {
-    color: $white;
-    background: $black;
-  }
-  & .cart__content {
-    & span {
-      color: $black;
-    }
-  }
-  & .header__currency::before {
-    background: #d69c00;
-  }
-  & .header__currency,
-  & .header__lang {
-    & .nice-select {
-      background: transparent;
-      color: $black;
-      &::after {
-        border-color: $black;
-      }
-    }
-  }
-}
-
-/* grey header css start */
-.grey-header {
-  background: $t-grey;
-  & .header__welcome {
-    & span {
-      color: $black-soft-7;
-    }
-  }
-  & .header__action ul li {
-    &::after {
-      background: #394452;
-    }
-    & a {
-      color: $black-soft-7;
-      &:hover {
-        color: $t-red-dark;
-      }
-    }
-  }
-  & .header__currency-4 {
-    & select {
-      color: $black-soft-7;
-    }
-  }
-  & .header__lang-4 {
-    & select {
-      color: $black-soft-7;
-    }
-  }
-  & .header__info {
-    border-color: #394452;
-  }
-  & .header__search-box input {
-    border: none;
-  }
-  & .header__search-box button {
-    background: $t-red-dark;
-    color: $white;
-  }
-  & .cart__toggle {
-    border: 2px solid #394452;
-    color: $white;
-    &::after {
-      color: $white;
-    }
-    &:hover {
-      background: $white;
-      border-color: $white;
-      &::after {
-        color: $t-red-dark;
-      }
-      & .cart__total-item {
-        background: $t-red-dark;
-        color: $white;
-      }
-    }
-    &.cart__toggle-open {
-      background: $white;
-      border-color: $white;
-      &::after {
-        color: $t-red-dark;
-      }
-      & .cart__total-item {
-        background: $t-red-dark;
-        color: $white;
-      }
-    }
-  }
-  & .cart__total-item {
-    background: $t-red-dark;
-  }
-  & .cart__content {
-    & span {
-      color: $white;
-      &.cart__total-price {
-        color: $black-soft-7;
       }
     }
   }

@@ -347,7 +347,7 @@ p {
 /* rating */
 
 .rating {
-  margin-bottom: 5px;
+  margin-bottom: 13px;
   &-2 {
     margin-bottom: 15px;
   }
@@ -355,7 +355,7 @@ p {
     & li {
       display: inline-block;
       & a {
-        color: $t-yellow;
+        color: $t-orange;
       }
     }
   }
@@ -486,5 +486,15 @@ p {
   }
   &-border {
     border-top: 1px solid #e6e6e6;
+  }
+}
+
+.owl-carousel {
+  .owl-stage {
+    display: flex;
+  }
+  .owl-item {
+    display: flex;
+    flex: 1 0 auto;
   }
 }
