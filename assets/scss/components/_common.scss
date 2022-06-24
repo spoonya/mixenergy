@@ -377,7 +377,7 @@ p {
   & a {
     display: block;
     border-radius: 0;
-    background: #4d5669;
+    background: $t-yellow;
     color: $white;
     text-transform: uppercase;
     padding: 20px 0;
@@ -386,7 +386,7 @@ p {
   }
   &:hover {
     & a {
-      color: $t-yellow;
+      color: $black;
     }
   }
   &-2 {
@@ -496,5 +496,16 @@ p {
   .owl-item {
     display: flex;
     flex: 1 0 auto;
+  }
+}
+
+.logo {
+  a,
+  img {
+    width: 100%;
+  }
+
+  @media #{$laptop} {
+    max-width: 148px;
   }
 }

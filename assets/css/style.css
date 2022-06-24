@@ -270,7 +270,7 @@ p {
 }
 
 .footer-bg {
-  background: #394150;
+  background: #06476c;
 }
 
 .footer-bg-2 {
@@ -388,7 +388,7 @@ p {
 .back-to-top-btn a {
   display: block;
   border-radius: 0;
-  background: #4d5669;
+  background: #0a9aee;
   color: #ffffff;
   text-transform: uppercase;
   padding: 20px 0;
@@ -396,7 +396,7 @@ p {
   font-weight: 500;
 }
 .back-to-top-btn:hover a {
-  color: #0a9aee;
+  color: #222;
 }
 .back-to-top-btn-2 a {
   background: #333;
@@ -493,6 +493,16 @@ p {
 .owl-carousel .owl-item {
   display: flex;
   flex: 1 0 auto;
+}
+
+.logo a,
+.logo img {
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .logo {
+    max-width: 148px;
+  }
 }
 
 /*----------------------------------------*/
@@ -1219,6 +1229,10 @@ p {
   padding-bottom: 20px;
   border-bottom: 1px solid #ebebeb;
 }
+.offcanvas__logo a,
+.offcanvas__logo img {
+  max-width: 148px;
+}
 .offcanvas__search {
   position: relative;
 }
@@ -1461,7 +1475,10 @@ p {
     padding-right: 0;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+.header__bottom {
+  padding: 10px 0;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header__bottom {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -5318,16 +5335,16 @@ p.checkout-coupon input[type=text]:focus {
   background: #00acee;
 }
 .footer__social ul li.gp a {
-  background: #DD4B39;
+  background: #dd4b39;
 }
 .footer__social ul li.yt a {
-  background: #FF0000;
+  background: #ff0000;
 }
 .footer__social ul li.pt a {
-  background: #E60023;
+  background: #e60023;
 }
 .footer__social ul li.em a {
-  background: #BB001B;
+  background: #bb001b;
 }
 .footer__social ul li a {
   display: inline-block;
