@@ -25,11 +25,19 @@
 
   &__links {
     display: flex;
-    margin: 0 46px;
+    margin-right: 46px;
 
     li {
       &:not(:last-child) {
         margin-right: 46px;
+      }
+    }
+
+    a {
+      transition: color 0.1s linear;
+
+      &:hover {
+        color: $black;
       }
     }
   }
@@ -159,6 +167,7 @@
   }
   &__search {
     width: 70%;
+    margin: 0 46px 0 20px;
     @media #{$sm} {
       width: 100%;
     }
