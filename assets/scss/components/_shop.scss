@@ -43,13 +43,12 @@
           flex-direction: column;
         }
         .product__content {
-          display: flex;
-          flex-direction: column;
           height: 100%;
         }
         .owl-item {
           display: block;
         }
+
         .product__thumb-sale {
           width: unset;
           display: flex;
@@ -251,7 +250,7 @@
         }
       }
       &.price-old {
-        color: $black-soft;
+        color: $body-text-color;
         font-weight: 400;
       }
     }

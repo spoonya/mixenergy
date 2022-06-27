@@ -22,6 +22,17 @@
   }
   &__top {
   }
+
+  &__links {
+    display: flex;
+    margin: 0 46px;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 46px;
+      }
+    }
+  }
   &__bottom {
     @media #{$lg} {
       padding-top: 20px;
@@ -103,6 +114,8 @@
     }
     &-right {
       position: relative;
+      display: flex;
+      align-items: center;
     }
   }
   &__hotline {
