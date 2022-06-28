@@ -1488,9 +1488,6 @@ p {
 .header__links a:hover {
   color: #222;
 }
-.header__bottom {
-  padding: 10px 0;
-}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header__bottom {
     padding-top: 20px;
@@ -4244,6 +4241,49 @@ p.checkout-coupon input[type=text]:focus {
 
 .order-button-payment button {
   width: 100%;
+}
+
+.filter-inputs__item {
+  display: flex;
+  flex-direction: column;
+}
+.filter-inputs__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.filter-inputs__item-name {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.filter-inputs__input {
+  display: flex;
+  align-items: center;
+}
+.filter-inputs__checkbox-text {
+  margin-left: 10px;
+  font-size: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.filter-inputs__more {
+  display: none;
+}
+.filter-inputs__more.active {
+  height: 100%;
+}
+.filter-inputs__more-button {
+  margin-top: 8px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  color: #0a9aee;
+  border-bottom: 1px solid transparent;
+  line-height: 1.2;
+  transition: border-color 0.1s linear;
+}
+.filter-inputs__more-button:hover {
+  border-color: #0a9aee;
 }
 
 /*----------------------------------------*/

@@ -2201,3 +2201,54 @@ p.checkout-coupon input[type="text"] {
 .order-button-payment button {
   width: 100%;
 }
+
+.filter-inputs {
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &-name {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    &-text {
+      margin-left: 10px;
+      font-size: 16px;
+      user-select: none;
+    }
+  }
+
+  &__more {
+    display: none;
+
+    &.active {
+      height: 100%;
+    }
+
+    &-button {
+      margin-top: 8px;
+      max-width: fit-content;
+      color: $t-yellow;
+      border-bottom: 1px solid transparent;
+      line-height: 1.2;
+
+      transition: border-color 0.1s linear;
+
+      &:hover {
+        border-color: $t-yellow;
+      }
+    }
+  }
+}
