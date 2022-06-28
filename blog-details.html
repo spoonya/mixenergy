@@ -29,11 +29,7 @@
 </head>
 
 <body>
-  <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
 
-  <!-- Add your site or application content here -->
 
   <!-- preloader area start -->
   <div id="loading">
@@ -56,70 +52,64 @@
   <!-- header area start -->
   <header>
     <div class="header__area">
-      <div class="header__top header__padding d-none d-sm-block">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 col-md-5 d-none d-md-block">
-              <div class="header__welcome">
-                <span>Welcome to Worldwide Electronics Store</span>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-7">
-              <div class="header__action d-flex justify-content-center justify-content-md-end">
-                <ul>
-                  <li><a href="#">My Account</a></li>
-                  <li><a href="#">My Wishlist</a></li>
-                  <li><a href="#">Sign In</a></li>
-                  <li><a href="#">Compare</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="header__info header__padding">
         <div class="container-fluid">
           <div class="row align-items-center">
-            <div class="col-xl-3 col-lg-3">
+            <div class="col-xl-4 col-lg-3">
               <div class="header__info-left d-flex justify-content-center justify-content-sm-between align-items-center">
                 <div class="logo">
                   <a href="index.html"><img src="assets/img/logo/logo-black.png" alt="logo"></a>
                 </div>
+                <div class="header__hotline align-items-center d-none d-sm-flex  d-lg-none d-xl-flex">
+                  <div class="header__hotline-icon">
+                    <i class="fal fa-headset"></i>
+                  </div>
+                  <div class="header__hotline-info">
+                    <span>Консультация:</span>
+                    <a href="tel:+375292255226">+375 (29) 225-52-26</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-xl-9 col-lg-9">
+            <div class="col-xl-8 col-lg-9">
               <div class="header__info-right">
                 <div class="header__search f-left d-none d-sm-block">
                   <form action="#">
                     <div class="header__search-box">
-                      <input type="text" placeholder="Search For Products...">
-                      <button type="submit">Search</button>
+                      <input type="text">
+                      <button type="submit">Поиск</button>
                     </div>
                     <div class="header__search-cat">
                       <select>
-                        <option>All Categories</option>
-                        <option>Best Seller Products</option>
-                        <option>Top 10 Offers</option>
-                        <option>New Arrivals</option>
-                        <option>Phones & Tablets</option>
-                        <option>Electronics & Digital</option>
-                        <option>Fashion & Clothings</option>
-                        <option>Jewelry & Watches</option>
-                        <option>Health & Beauty</option>
-                        <option>Sound & Speakers</option>
-                        <option>TV & Audio</option>
-                        <option>Computers</option>
+                        <option>Все категории</option>
+                        <option>Светильники</option>
+                        <option>Лампы</option>
+                        <option>Стабилизаторы напряжения</option>
+                        <option>Кабель и провода</option>
+                        <option>Запорная арматураl</option>
+                        <option>Водонагреватели</option>
+                        <option>Смесители и комплектующие</option>
+                        <option>Ванны</option>
+                        <option>Поддоны</option>
                       </select>
                     </div>
                   </form>
                 </div>
+                <ul class="header__links">
+                  <li>
+                    <a href="#">Избранное</a>
+                  </li>
+                  <li>
+                    <a href="№">Сравнение</a>
+                  </li>
+                </ul>
                 <div class="cart__mini-wrapper d-none d-md-flex f-right p-relative">
                   <a href="javascript:void(0);" class="cart__toggle">
                     <span class="cart__total-item">01</span>
                   </a>
                   <span class="cart__content">
-                    <span class="cart__my">My Cart:</span>
-                    <span class="cart__total-price">$ 255.00</span>
+                    <span class="cart__my">Корзина:</span>
+                    <span class="cart__total-price">120 BYN</span>
                   </span>
                   <div class="cart__mini">
                     <div class="cart__close"><button type="button" class="cart__close-btn"><i class="fal fa-times"></i></button></div>
@@ -168,7 +158,7 @@
           </div>
         </div>
       </div>
-      <div class="header__bottom header__padding header__bottom-border">
+      <div class="header__bottom header__bottom-border header__padding">
         <div class="container-fluid">
           <div class="row align-items-center">
             <div class="col-xl-9 col-lg-9 col-md-12 col-sm-6 col-6">
@@ -180,75 +170,45 @@
                   <nav id="mobile-menu-2">
                     <ul>
                       <li>
-                        <a href="index.html">Home <i class="far fa-angle-down"></i></a>
-                        <ul class="submenu">
-                          <li><a href="index.html">Home Style 1</a></li>
-                          <li><a href="index-2.html">Home Style 2</a></li>
-                          <li><a href="index-3.html">Home Style 3</a></li>
-                          <li><a href="index-4.html">Home Style 4</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="product.html">Features <i class="far fa-angle-down"></i></a>
-                        <ul class="submenu">
-                          <li><a href="product.html">Product Type</a></li>
-                          <li><a href="product.html">Product Features <i class="far fa-angle-down"></i></a>
-                            <ul class="submenu">
-                              <li><a href="product-details.html">Simple Product</a></li>
-                              <li><a href="product-details-config.html">Configurable Product</a></li>
-                              <li><a href="product-details-group.html">Group Product</a></li>
-                              <li><a href="product-details-download.html">Downloadable Product</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="product.html">Shop By Brand</a></li>
-                        </ul>
+                        <a href="product.html">Каталог</a>
                       </li>
                       <li>
-                        <a href="blog.html">Blog <i class="far fa-angle-down"></i></a>
-                        <ul class="submenu">
-                          <li><a href="blog.html">Blog</a></li>
-                          <li><a href="blog-detaills.html">Blog Details</a></li>
-                        </ul>
+                        <a href="blog.html">Блог</a>
                       </li>
-                      <li><a href="about.html">about us</a></li>
-                      <li><a href="contact.html">contact</a></li>
                       <li>
-                        <a href="about.html">pages <i class="far fa-angle-down"></i></a>
-                        <ul class="submenu">
-                          <li><a href="login.html">Login</a></li>
-                          <li><a href="register.html">Register</a></li>
-                          <li><a href="cart.html">Cart</a></li>
-                          <li><a href="wishlist.html">Wishlist</a></li>
-                          <li><a href="checkout.html">Checkout</a></li>
-                          <li><a href="error.html">404 Error</a></li>
-                        </ul>
+                        <a href="about.html">О нас</a>
+                      </li>
+                      <li>
+                        <a href="contact.html">Контакты</a>
                       </li>
                     </ul>
                   </nav>
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-3  col-sm-6  col-6 d-md-none d-lg-block">
-              <div class="header__bottom-right d-flex justify-content-end">
-                <div class="header__currency">
-                  <select>
-                    <option>USD</option>
-                    <option>USD</option>
-                    <option>USD</option>
-                    <option>USD</option>
-                    <option>USD</option>
-                  </select>
-                </div>
-                <div class="header__lang d-md-none d-lg-block">
-                  <select>
-                    <option>English</option>
-                    <option>Bangla</option>
-                    <option>Arabic</option>
-                    <option>Hindi</option>
-                    <option>Urdu</option>
-                  </select>
-                </div>
-              </div>
-            </div>
+            <!--Удалить-->
+            <!-- <div class="col-xl-3 col-lg-3  col-sm-6  col-6 d-md-none d-lg-block">
+                  <div class="header__bottom-right d-flex justify-content-end">
+                    <div class="header__currency">
+                      <select>
+                        <option>USD</option>
+                        <option>USD</option>
+                        <option>USD</option>
+                        <option>USD</option>
+                        <option>USD</option>
+                      </select>
+                    </div>
+                    <div class="header__lang d-md-none d-lg-block">
+                      <select>
+                        <option>English</option>
+                        <option>Bangla</option>
+                        <option>Arabic</option>
+                        <option>Hindi</option>
+                        <option>Urdu</option>
+                      </select>
+                    </div>
+                  </div>
+                </div> -->
           </div>
         </div>
       </div>
@@ -688,167 +648,183 @@
 
   <!-- footer area start -->
   <footer>
-    <div class="footer__area footer-bg-2 yellow-footer">
+    <div class="footer__area footer-bg">
       <div class="footer__top pt-80 pb-40">
-        <div class="container custom-container">
-          <div class="row">
-            <div class="col-xl-6 col-lg-12">
-              <div class="footer__top-left">
-                <div class="row">
-                  <div class="col-xl-5 col-lg-6 col-md-6 col-sm-6">
-                    <div class="footer__widget">
-                      <div class="footer__widget-title mb-45">
-                        <div class="footer__logo">
-                          <a href="index.html"><img src="assets/img/logo/logo-white.png" alt=""></a>
-                        </div>
-                      </div>
-                      <div class="footer__widget-content">
-                        <div class="footer__hotline footer__hotline-4 d-flex align-items-center mb-30">
-                          <div class="icon mr-15">
-                            <i class="fal fa-headset"></i>
-                          </div>
-                          <div class="text">
-                            <h4>Hotline Free 24/24:</h4>
-                            <span>(+100) 123 456 7890</span>
-                          </div>
-                        </div>
-                        <div class="footer__info footer__info-4">
-                          <ul>
-                            <li>
-                              <span>Add:
-                                <a target="_blank" href="https://www.google.com/maps/place/Dhaka/@23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873">Walls Street 68, Mahattan, New York, USA</a>
-                              </span>
-                            </li>
-                            <li><span>Email: <a href="mailto:info@thebuesky.com">info@thebuesky.com</a> </span></li>
-                            <li><span>Fax: <a href="tel:123-456-7890">(+100) 123 456 7890</a> - <a href="tel:-100-123-456-7891">(+100) 123 456 7891</a> </span></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-7 col-lg-6 col-md-6 col-sm-6">
-                    <div class="row">
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                        <div class="footer__widget">
-                          <div class="footer__widget-title footer__widget-title-4">
-                            <h4>Information</h4>
-                          </div>
-                          <div class="footer__widget-content">
-                            <div class="footer__link footer__link-4">
-                              <ul>
-                                <li><a href="#"> Custom Service </a></li>
-                                <li><a href="#">F.A.Q.’s</a></li>
-                                <li><a href="#">Ordering Tracking</a></li>
-                                <li><a href="#"> Contacts</a></li>
-                                <li><a href="#">Events</a></li>
-                                <li><a href="#">Popular</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                        <div class="footer__widget">
-                          <div class="footer__widget-title footer__widget-title-4">
-                            <h4>Our Services</h4>
-                          </div>
-                          <div class="footer__widget-content">
-                            <div class="footer__link footer__link-4">
-                              <ul>
-                                <li><a href="#">Sitemap</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Your Account</a></li>
-                                <li><a href="#">Advanced Search</a></li>
-                                <li><a href="#">Terms & Condition</a></li>
-                                <li><a href="#"> Contact Us</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__about">
+              <a class="logo footer__logo" href="index.html">
+                <img src="assets/img/logo/logo-light.png" width="228" height="49" alt="" loading="lazy">
+              </a>
+              <p class="footer__copyright">ООО МиксЭнерджи &copy; 2022</p>
+              <img class="footer__about-img" src="assets/img/accreditation.jpg" width="180" height="76" alt="" loading="lazy">
+            </div>
+            <div class="footer__menu">
+              <div class="footer__menu-item">
+                <ul class="footer__menu-list">
+                  <li>
+                    <a href="#">Блог</a>
+                  </li>
+                  <li>
+                    <a href="#">О нас</a>
+                  </li>
+                  <li>
+                    <a href="#">Контакты</a>
+                  </li>
+                  <li>
+                    <a href="#">Электрика</a>
+                    <ul class="footer__menu-sublist">
+                      <li>
+                        <a href="#">Светильники</a>
+                      </li>
+                      <li>
+                        <a href="#">Лампы</a>
+                      </li>
+                      <li>
+                        <a href="#">Стабилизаторы напряжения</a>
+                      </li>
+                      <li>
+                        <a href="#">Электроустановочные и электромонтажные изделия</a>
+                      </li>
+                      <li>
+                        <a href="#">Модульная автоматика</a>
+                      </li>
+                      <li>
+                        <a href="#">Силовое оборудование</a>
+                      </li>
+                      <li>
+                        <a href="#">Электрощитовое оборудование</a>
+                      </li>
+                      <li>
+                        <a href="#">Кабеленесущие системы</a>
+                      </li>
+                      <li>
+                        <a href="#">Кабель и провода</a>
+                      </li>
+                      <li>
+                        <a href="#">Метизная продукция</a>
+                      </li>
+                      <li>
+                        <a href="#">Сухие трансформаторы ТСЗ</a>
+                      </li>
+                      <li>
+                        <a href="#">Электродвигателя</a>
+                      </li>
+                      <li>
+                        <a href="#">Вентиляторы</a>
+                      </li>
+                      <li>
+                        <a href="#">Молниезащита и заземление</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__menu-item">
+                <ul class="footer__menu-list">
+                  <li>
+                    <a href=" #">Сантехника</a>
+                    <ul class="footer__menu-sublist">
+                      <li>
+                        <a href="#">Запорная арматура</a>
+                      </li>
+                      <li>
+                        <a href="#">Водонагреватели</a>
+                      </li>
+                      <li>
+                        <a href="#">Смесители и комплектующие</a>
+                      </li>
+                      <li>
+                        <a href="#">Ванны</a>
+                      </li>
+                      <li>
+                        <a href="#">Поддоны</a>
+                      </li>
+                      <li>
+                        <a href="#">Сафаянс</a>
+                      </li>
+                      <li>
+                        <a href="#">Полотенцесушители</a>
+                      </li>
+                      <li>
+                        <a href="#">Трубы и фитинги</a>
+                      </li>
+                      <li>
+                        <a href="#">Комплектующие для сантехники</a>
+                      </li>
+                      <li>
+                        <a href="#">Отопительное оборудование</a>
+                      </li>
+                      <li>
+                        <a href="#">Канализационное оборудование</a>
+                      </li>
+                      <li>
+                        <a href="#">Контрольно-измерительные приборы</a>
+                      </li>
+                      <li>
+                        <a href="#">Уплотнительные и смазывающие материалы</a>
+                      </li>
+                      <li>
+                        <a href="#">Защитные и теплоизоляционные материалы</a>
+                      </li>
+                      <li>
+                        <a href="#">Сопутствующие товары</a>
+                      </li>
+                      <li>
+                        <a href="#">Специнструмент, спецодежда</a>
+                      </li>
+                      <li>
+                        <a href="#">Насосное оборудование</a>
+                      </li>
+                      <li>
+                        <a href="#">Детали трубопровода</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="col-xl-6 col-lg-12">
-              <div class="row">
-                <div class="col-xl-7 col-lg-6 col-md-6 col-sm-6">
-                  <div class="row">
-                    <div class="col-xl-6 col-lg-6">
-                      <div class="footer__widget">
-                        <div class="footer__widget-title footer__widget-title-4">
-                          <h4>My Account</h4>
-                        </div>
-                        <div class="footer__widget-content">
-                          <div class="footer__link footer__link-4">
-                            <ul>
-                              <li><a href="#"> About us </a></li>
-                              <li><a href="#">Delivery Information</a></li>
-                              <li><a href="#">Privacy Policy</a></li>
-                              <li><a href="#">Discount</a></li>
-                              <li><a href="#">Custom Service</a></li>
-                              <li><a href="#">Terms & Condition</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                      <div class="footer__widget">
-                        <div class="footer__widget-title footer__widget-title-4">
-                          <h4>Payment & Shipping</h4>
-                        </div>
-                        <div class="footer__widget-content">
-                          <div class="footer__link footer__link-4">
-                            <ul>
-                              <li><a href="#">Terms Of Use</a></li>
-                              <li><a href="#">Payment Methods</a></li>
-                              <li><a href="#">Shipping Guide</a></li>
-                              <li><a href="#">Locations We Ship To</a></li>
-                              <li><a href="#">Estimated Delivery Time</a></li>
-                              <li><a href="#">Express</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-5 col-lg-6 col-md-6 col-sm-6">
-                  <div class="footer__widget">
-                    <div class="footer__widget-title">
-                      <h4>Sign Up For Newsletter</h4>
-                    </div>
-                    <div class="footer__widget-content">
-                      <div class="footer__subscribe">
-                        <p> <span>Join 40.00+ Subscribers</span> and get a new discount coupon on every Saturday.</p>
-                        <div class="footer__subscribe-form">
-                          <form action="#">
-                            <input type="email" placeholder="Your Email Address...">
-                            <button type="submit">subscribe</button>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="footer__contacts">
+              <div class="footer__contacts-item">
+                <img src="assets/img/svg/location.svg" width="24" height="24" alt="" loading="lazy">
+                <a href="#" class="footer__contacts-item" target="_blank">г. Минск, ул. Артиллеристов, дом № 8, корпус 3, офис 17</a>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer__copyright footer__copyright-2 pt-30 pb-35 footer-bg-2">
-        <div class="container custom-container">
-          <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6">
-              <div class="footer__copyright-text footer__copyright-text-2">
-                <p>Copyright © <a href="index.html">Topico.</a> All Rights Reserved. <a href="#">ThemePure.</a></p>
+              <div class="footer__contacts-item">
+                <img src="assets/img/svg/message.svg" width="24" height="24" alt="" loading="lazy">
+                <a href="mailto:info@mixenerdgy.by" class="footer__contacts-item">info@mixenerdgy.by</a>
               </div>
-            </div>
-            <div class="col-xl-6 col-lg-6">
-              <div class="footer__payment f-right">
-                <a href="#" class="m-img"><img src="assets/img/icon/payment.png" alt=""></a>
+              <div class="footer__contacts-phones">
+                <img src="assets/img/svg/phone.svg" width="20" height="20" alt="" loading="lazy">
+                <div class="footer__contacts-content">
+                  <ul class="footer__contacts-phones-numbers">
+                    <li>
+                      <a href="tel:+375293774710">+375 (29) 377-47-10</a>
+                    </li>
+                    <li>
+                      <a href="tel:+375297386466">+375 (29) 738-64-66</a>
+                    </li>
+                    <li>
+                      <a href="tel:+375173926366">+375 (17) 392-63-66</a>
+                    </li>
+                  </ul>
+                  <ul class="footer__contacts-phones-social">
+                    <li>
+                      <a href="#" target="_blank" aria-label="whatsapp">
+                        <img src="assets/img/svg/whatsapp.svg" width="30" height="30" alt="" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" aria-label="viber">
+                        <img src="assets/img/svg/viber.svg" width="30" height="30" alt="" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" aria-label="telegram">
+                        <img src="assets/img/svg/telegram.svg" width="30" height="30" alt="" loading="lazy">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
