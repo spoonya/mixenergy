@@ -4,6 +4,46 @@
 /*----------------------------------------*/
 
 .about {
+  &__block-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: $black;
+  }
+
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      font-size: 16px;
+      color: $t-text-1;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 35px;
+
+    ul {
+      margin-left: 15px;
+
+      li {
+        list-style: disc;
+      }
+    }
+  }
+
   &__mt--325 {
     margin-top: -325px;
 
