@@ -2008,6 +2008,11 @@ p {
   color: #222;
   font-weight: 500;
 }
+@media (max-width: 991.98px) {
+  .slider-intro__link {
+    padding: 8px 50px;
+  }
+}
 .slider-intro__img {
   position: absolute;
   right: 0;
@@ -2090,6 +2095,7 @@ p {
   }
   .slider-intro__descrip-bot ul li {
     font-size: 14px;
+    max-width: unset;
   }
 }
 
@@ -2148,19 +2154,36 @@ p {
 }
 .banner__item-descrip {
   padding: 20px 0 20px 15px;
+  margin-right: 20px;
 }
 .banner__item-img {
   max-width: 243px;
+  height: auto;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
+}
+@media (max-width: 1399.98px) {
+  .banner__item-img {
+    max-width: 170px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .banner__item-img {
+    max-width: 120px;
+  }
 }
 .banner__item-title {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 30px;
   color: #dd0404;
+}
+@media (max-width: 1399.98px) {
+  .banner__item-title {
+    font-size: 25px;
+  }
 }
 .banner__item-text {
   color: #222;
@@ -2179,9 +2202,30 @@ p {
 }
 .banner__item--2 .banner__item-img {
   max-width: 308px;
+  height: auto;
+}
+@media (max-width: 1399.98px) {
+  .banner__item--2 .banner__item-img {
+    max-width: 240px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .banner__item--2 .banner__item-img {
+    max-width: 200px;
+  }
+}
+@media (max-width: 575.98px) {
+  .banner__item--2 .banner__item-img {
+    max-width: 120px;
+  }
 }
 .banner__item--2 .banner__item-text {
   margin-bottom: 30px;
+}
+@media (max-width: 575.98px) {
+  .banner__item--2 .banner__item-text {
+    font-size: 14px;
+  }
 }
 .banner__item--3 .banner__item-inner {
   flex-direction: column;
@@ -2198,12 +2242,22 @@ p {
   padding: 20px 20px 0 25px;
   margin-bottom: 17px;
 }
+@media (max-width: 1199.98px) {
+  .banner__item--3 .banner__item-descrip {
+    padding: 15px 15px 0 15px;
+  }
+}
 .banner__item--3 .banner__item-title {
   color: #ffffff;
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 20px;
   text-transform: none;
+}
+@media (max-width: 1199.98px) {
+  .banner__item--3 .banner__item-title {
+    font-size: 18px;
+  }
 }
 .banner__item--3 .banner__item-text {
   color: #ffffff;
@@ -2278,6 +2332,16 @@ p {
   line-height: 12px;
   margin-bottom: 0;
 }
+@media (max-width: 767.98px) {
+  .features__content {
+    max-width: 150px;
+  }
+}
+@media (max-width: 575.98px) {
+  .features__content {
+    max-width: unset;
+  }
+}
 
 /*----------------------------------------*/
 /*  06. SHOP CSS START
@@ -2314,6 +2378,7 @@ p {
 .product__desktop-slider-3 .product__item-wrapper {
   display: flex;
   height: 100%;
+  width: 100%;
   flex-direction: column;
 }
 .product__desktop-slider-3 .product__content {
@@ -2516,10 +2581,25 @@ p {
   margin-bottom: 13px;
   max-width: 212px;
 }
+@media (max-width: 575.98px) {
+  .product__content-2 h6 {
+    max-width: unset;
+  }
+}
 .product__content-2 p {
   padding: 0;
   font-size: 16px;
   max-width: 341px;
+}
+@media (max-width: 991.98px) {
+  .product__content-2 p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 575.98px) {
+  .product__content-2 p {
+    max-width: unset;
+  }
 }
 .product__content-4 h6 {
   color: #222;
@@ -2741,10 +2821,26 @@ p {
   display: flex;
   flex-direction: column;
 }
+.product__deal-3 .product__deal-item {
+  width: 100%;
+}
+.product__deal-3 .product__deal-item-img img {
+  max-width: 330px;
+  height: auto;
+}
 .product__deal-3 .product__deal-item-img .product__thumb {
   height: 100%;
   align-items: center;
+  justify-content: center;
   display: flex;
+}
+@media (max-width: 575.98px) {
+  .product__deal-3 .product__deal-item-img .product__thumb {
+    margin-bottom: 20px;
+  }
+}
+.product__electronic-item {
+  width: 100%;
 }
 .product__electronic .owl-nav {
   display: flex;
@@ -4436,6 +4532,14 @@ p.checkout-coupon input[type=text]:focus {
   padding: 15px 10px;
   align-items: center;
 }
+.sale__slider-3 .product__item-wrapper {
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .sale__slider-3 .product__thumb-sale {
+    width: unset;
+  }
+}
 
 /*----------------------------------------*/
 /*  08. BLOG CSS START
@@ -5565,6 +5669,11 @@ p.checkout-coupon input[type=text]:focus {
 .footer__logo img {
   max-width: 228px;
   height: auto;
+}
+@media (max-width: 575.98px) {
+  .footer__logo {
+    margin: 0 auto 30px;
+  }
 }
 .footer__about-img {
   max-width: 180px;
