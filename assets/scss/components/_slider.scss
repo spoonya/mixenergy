@@ -52,11 +52,30 @@
     justify-content: space-between;
 
     padding: 75px 65px 77px 43px;
+
+    @media (max-width: 991.98px) {
+      flex-direction: column;
+      padding: 30px 30px 60px 30px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 30px;
+    }
   }
 
   &__logo {
     max-width: 434px;
     margin-bottom: 40px;
+    height: auto;
+
+    @media (max-width: 991.98px) {
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 767.98px) {
+      max-width: 200px;
+    }
   }
 
   &__title {
@@ -65,6 +84,19 @@
     font-size: 28px;
     line-height: 1.2;
     margin-bottom: 40px;
+
+    @media (max-width: 991.98px) {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 767.98px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 575.98px) {
+      font-size: 16px;
+    }
   }
 
   &__link {
@@ -83,6 +115,23 @@
     max-width: 520px;
     object-fit: contain;
     object-position: 50% 50%;
+    height: auto;
+
+    @media (max-width: 1399.98px) {
+      max-width: 350px;
+    }
+
+    @media (max-width: 991.98px) {
+      max-width: 270px;
+    }
+
+    @media (max-width: 767.98px) {
+      max-width: 200px;
+    }
+
+    @media (max-width: 479.98px) {
+      display: none !important;
+    }
   }
 
   &__descrip {
@@ -90,6 +139,21 @@
       max-width: 486px;
 
       margin-bottom: 74px;
+
+      @media (max-width: 991.98px) {
+        max-width: 370px;
+
+        margin-bottom: 50px;
+      }
+
+      @media (max-width: 767.98px) {
+        max-width: 230px;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 479.98px) {
+        max-width: unset;
+      }
     }
 
     &-bot {
@@ -114,6 +178,18 @@
             top: -2px;
 
             content: url("../img/svg/check-circle.svg");
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 479.98px) {
+          grid-template-columns: repeat(1, 1fr);
+
+          li {
+            font-size: 14px;
           }
         }
       }
