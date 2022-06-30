@@ -500,9 +500,12 @@ p {
 }
 
 .logo {
+  max-width: 196px;
+
   a,
   img {
     width: 100%;
+    height: auto;
   }
 
   @media (max-width: 1399.98px) {

@@ -495,9 +495,13 @@ p {
   flex: 1 0 auto;
 }
 
+.logo {
+  max-width: 196px;
+}
 .logo a,
 .logo img {
   width: 100%;
+  height: auto;
 }
 @media (max-width: 1399.98px) {
   .logo {
@@ -741,7 +745,6 @@ p {
   position: relative;
   display: inline-block;
   padding: 10px 15px;
-  text-transform: capitalize;
   background: #ffffff;
   color: #222;
   border-bottom: 1px solid #ebebeb;
@@ -5708,9 +5711,9 @@ p.checkout-coupon input[type=text]:focus {
 .footer__logo {
   margin-bottom: 30px;
   display: block;
+  max-width: 228px;
 }
 .footer__logo img {
-  max-width: 228px;
   height: auto;
 }
 @media (max-width: 575.98px) {
