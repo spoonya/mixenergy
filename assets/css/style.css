@@ -5736,6 +5736,7 @@ p.checkout-coupon input[type=text]:focus {
 }
 .footer__menu a {
   display: block;
+  line-height: 17px;
   transition: transform 0.2s ease;
 }
 .footer__menu a:hover {
@@ -5752,7 +5753,7 @@ p.checkout-coupon input[type=text]:focus {
 .footer__menu-sublist {
   margin-top: 10px;
 }
-.footer__menu-sublist li {
+.footer__menu-sublist li:not(:last-child) {
   margin-bottom: 8px;
 }
 .footer__menu-sublist li a {

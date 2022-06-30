@@ -85,6 +85,7 @@
 
     a {
       display: block;
+      line-height: 17px;
 
       transition: transform 0.2s ease;
 
@@ -111,7 +112,9 @@
       margin-top: 10px;
 
       li {
-        margin-bottom: 8px;
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
 
         a {
           font-size: 14px;
