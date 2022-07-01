@@ -4,6 +4,35 @@
 /*----------------------------------------*/
 
 .footer {
+  &__bot {
+    padding: 5px 0;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.5);
+      margin-right: 5px;
+      letter-spacing: 0.02em;
+      font-size: 12px;
+    }
+
+    a {
+      max-width: 92px;
+
+      img {
+        height: auto;
+      }
+    }
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
   &__inner {
     display: flex;
 

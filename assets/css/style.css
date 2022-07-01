@@ -5657,6 +5657,29 @@ p.checkout-coupon input[type=text]:focus {
 /*----------------------------------------*/
 /*  00. FOOTER CSS START
 /*----------------------------------------*/
+.footer__bot {
+  padding: 5px 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+}
+.footer__bot p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.5);
+  margin-right: 5px;
+  letter-spacing: 0.02em;
+  font-size: 12px;
+}
+.footer__bot a {
+  max-width: 92px;
+}
+.footer__bot a img {
+  height: auto;
+}
+.footer__bot-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .footer__inner {
   display: flex;
 }
