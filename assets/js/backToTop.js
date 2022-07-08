@@ -29,7 +29,7 @@
         jQuery(".progress-wrap").on("click", function (s) {
           return (
             s.preventDefault(),
-            jQuery("html, body").animate({ scrollTop: 0 }, 550),
+            jQuery("html, body").animate({ scrollTop: 0 }, 150),
             !1
           );
         });

@@ -4,6 +4,19 @@
 /*----------------------------------------*/
 
 .product {
+  &__modal {
+    &-links {
+      @media (min-width: 992px) {
+        margin-left: 20px;
+      }
+    }
+
+    &-form {
+      @media (max-width: 991.98px) {
+        flex-direction: column;
+      }
+    }
+  }
   &__slider {
     & .owl-nav {
       display: flex;
@@ -29,6 +42,7 @@
       }
     }
   }
+
   &__desktop {
     &-slider {
       &-3 {
@@ -104,6 +118,7 @@
       }
     }
     &:hover {
+      overflow: visible;
       @include box-shadow(0 0 20px 0 rgba(155, 166, 200, 0.2));
       & .product__thumb {
         & .second-img {
@@ -114,11 +129,12 @@
         & .product__action {
           visibility: visible;
           opacity: 1;
-          bottom: 20px;
+          top: 0;
+          right: 20px;
         }
       }
       & .product__add-btn {
-        bottom: 35px;
+        bottom: -13px;
         visibility: visible;
         opacity: 1;
         &-4 {
@@ -178,10 +194,8 @@
     }
   }
   &__action {
-    bottom: -40px;
-    left: 0;
+    top: 0;
     right: 0;
-    margin: auto;
     text-align: center;
     @include transition(0.3s);
     visibility: hidden;
@@ -552,6 +566,12 @@
   &__electronic {
     &-item {
       width: 100%;
+
+      &:hover {
+        .product__add-btn {
+          bottom: 20px;
+        }
+      }
     }
 
     & .owl-nav {
@@ -941,6 +961,13 @@
         margin-top: 30px;
       }
     }
+
+    &-quantity {
+      @media (max-width: 991.98px) {
+        flex-direction: column;
+      }
+    }
+
     &-nav {
       &-thumb {
         & img {
@@ -951,6 +978,7 @@
       }
       & .nav-tabs {
         border: none;
+        margin-right: 1px;
         & .nav-item {
           padding: 0;
           & .nav-link {
@@ -1027,6 +1055,13 @@
             }
           }
         }
+      }
+      @media (max-width: 1024.98px) {
+        margin-left: 15px;
+      }
+
+      @media (max-width: 991.98px) {
+        margin-left: 0;
       }
     }
     &-des {
@@ -1530,7 +1565,7 @@
 }
 
 .cart-plus-minus {
-  width: 180px;
+  width: 90px;
 }
 .cart-plus-minus input {
   border: 0px;
@@ -1542,8 +1577,8 @@
   display: inline-block;
   height: 45px;
   list-style: 45px;
-  padding: 0 50px;
-  width: 180px;
+  padding: 0 25px;
+  width: 90px;
   border: 1px solid #ebebeb;
   text-align: center;
   @include border-radius(30px);
@@ -2281,5 +2316,11 @@ p.checkout-coupon input[type="text"] {
         border-color: $t-yellow;
       }
     }
+  }
+}
+
+.pro-cart-btn {
+  .t-y-btn {
+    padding: 0 40px;
   }
 }

@@ -460,6 +460,9 @@ p {
 // basic pagination
 
 .basic-pagination {
+  display: flex;
+  justify-content: center;
+
   & ul {
     & li {
       display: inline-block;

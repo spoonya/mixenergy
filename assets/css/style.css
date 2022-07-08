@@ -462,6 +462,10 @@ p {
   transform: scale(1.7);
 }
 
+.basic-pagination {
+  display: flex;
+  justify-content: center;
+}
 .basic-pagination ul li {
   display: inline-block;
 }
@@ -954,7 +958,7 @@ p {
 /* side menu btn */
 .side-menu-btn {
   background: transparent;
-  font-size: 18px;
+  font-size: 29px;
   color: #222;
 }
 .side-menu-btn:hover {
@@ -2349,6 +2353,16 @@ p {
 /*----------------------------------------*/
 /*  06. SHOP CSS START
 /*----------------------------------------*/
+@media (min-width: 992px) {
+  .product__modal-links {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 991.98px) {
+  .product__modal-form {
+    flex-direction: column;
+  }
+}
 .product__slider .owl-nav {
   display: flex;
   position: absolute;
@@ -2438,6 +2452,7 @@ p {
   box-shadow: none;
 }
 .product__item:hover {
+  overflow: visible;
   box-shadow: 0 0 20px 0 rgba(155, 166, 200, 0.2);
 }
 .product__item:hover .product__thumb .second-img {
@@ -2448,10 +2463,11 @@ p {
 .product__item:hover .product__thumb .product__action {
   visibility: visible;
   opacity: 1;
-  bottom: 20px;
+  top: 0;
+  right: 20px;
 }
 .product__item:hover .product__add-btn {
-  bottom: 35px;
+  bottom: -13px;
   visibility: visible;
   opacity: 1;
 }
@@ -2511,10 +2527,8 @@ p {
   }
 }
 .product__action {
-  bottom: -40px;
-  left: 0;
+  top: 0;
   right: 0;
-  margin: auto;
   text-align: center;
   transition: all 0.3s ease-out 0s;
   visibility: hidden;
@@ -2844,6 +2858,9 @@ p {
 }
 .product__electronic-item {
   width: 100%;
+}
+.product__electronic-item:hover .product__add-btn {
+  bottom: 20px;
 }
 .product__electronic .owl-nav {
   display: flex;
@@ -3196,6 +3213,11 @@ p {
     margin-top: 30px;
   }
 }
+@media (max-width: 991.98px) {
+  .product__details-quantity {
+    flex-direction: column;
+  }
+}
 @media only screen and (min-width: 1400px) and (max-width: 1600px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .product__details-nav-thumb img {
     width: 100%;
@@ -3203,6 +3225,7 @@ p {
 }
 .product__details-nav .nav-tabs {
   border: none;
+  margin-right: 1px;
 }
 .product__details-nav .nav-tabs .nav-item {
   padding: 0;
@@ -3271,6 +3294,16 @@ p {
   color: #222;
   background: #0a9aee;
   border-color: #0a9aee;
+}
+@media (max-width: 1024.98px) {
+  .product__details-action {
+    margin-left: 15px;
+  }
+}
+@media (max-width: 991.98px) {
+  .product__details-action {
+    margin-left: 0;
+  }
 }
 .product__details-des h3 {
   font-size: 18px;
@@ -3734,7 +3767,7 @@ p {
 }
 
 .cart-plus-minus {
-  width: 180px;
+  width: 90px;
 }
 
 .cart-plus-minus input {
@@ -3747,8 +3780,8 @@ p {
   display: inline-block;
   height: 45px;
   list-style: 45px;
-  padding: 0 50px;
-  width: 180px;
+  padding: 0 25px;
+  width: 90px;
   border: 1px solid #ebebeb;
   text-align: center;
   border-radius: 30px;
@@ -4508,6 +4541,10 @@ p.checkout-coupon input[type=text]:focus {
 }
 .filter-inputs__more-button:hover {
   border-color: #0a9aee;
+}
+
+.pro-cart-btn .t-y-btn {
+  padding: 0 40px;
 }
 
 /*----------------------------------------*/
