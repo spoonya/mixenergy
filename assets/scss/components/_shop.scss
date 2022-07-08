@@ -12,6 +12,26 @@
     }
 
     &-form {
+      .cart-plus-minus {
+        width: 90px;
+      }
+      .cart-plus-minus input {
+        border: 0px;
+        outline: 0px;
+        background: none;
+        font-weight: 400;
+        color: $black;
+        font-size: 14px;
+        display: inline-block;
+        height: 45px;
+        list-style: 45px;
+        padding: 0 25px;
+        width: 90px;
+        border: 1px solid #ebebeb;
+        text-align: center;
+        @include border-radius(30px);
+      }
+
       @media (max-width: 991.98px) {
         flex-direction: column;
       }
@@ -538,6 +558,10 @@
       .product__item {
         display: flex;
         flex-direction: column;
+
+        @media (min-width: 1200px) {
+          height: 100%;
+        }
       }
 
       .product__deal-item {
@@ -1565,7 +1589,7 @@
 }
 
 .cart-plus-minus {
-  width: 90px;
+  width: 180px;
 }
 .cart-plus-minus input {
   border: 0px;
@@ -1577,8 +1601,8 @@
   display: inline-block;
   height: 45px;
   list-style: 45px;
-  padding: 0 25px;
-  width: 90px;
+  padding: 0 50px;
+  width: 180px;
   border: 1px solid #ebebeb;
   text-align: center;
   @include border-radius(30px);
@@ -1718,6 +1742,7 @@ html .ui-button.ui-state-disabled:active {
 .table-content table td .cart-plus-minus {
   float: none;
   margin: 0 auto;
+  position: relative;
 }
 
 .coupon-all {
