@@ -4,6 +4,87 @@
 /*----------------------------------------*/
 
 .product {
+  &__category {
+    font-size: 14px;
+    margin-bottom: 35px;
+    border: 1px solid #ebebeb;
+    padding: 0 5px;
+    border-radius: 5px;
+
+    &-sublist {
+      overflow: hidden;
+      max-height: 0;
+
+      transition: max-height 0.25s ease;
+    }
+
+    &-list {
+      & > li.active {
+        .product__category-sublist {
+          max-height: 1000px;
+          transition: max-height 0.5s ease;
+        }
+
+        button {
+          i {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+
+    a {
+      padding: 10px 14px;
+      border-bottom: 1px solid #ebebeb;
+      display: inline-block;
+      width: 100%;
+      line-height: 17px;
+      transition: color 0.1s;
+
+      &:hover {
+        color: $t-yellow;
+      }
+    }
+
+    li:last-child {
+      &:not(.active) {
+        button {
+          border-bottom: 1px solid transparent;
+        }
+      }
+
+      li:last-child {
+        a {
+          border-bottom: none;
+        }
+      }
+    }
+
+    button {
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: 500;
+      line-height: 17px;
+      padding: 14px;
+      border-bottom: 1px solid #ebebeb;
+
+      transition: color 0.1s, border-bottom 0.25s;
+
+      &:hover {
+        color: $t-yellow;
+      }
+
+      i {
+        color: $t-yellow;
+      }
+    }
+  }
+  &__page-title {
+    margin-bottom: 40px;
+  }
   &__modal {
     &-links {
       @media (min-width: 992px) {

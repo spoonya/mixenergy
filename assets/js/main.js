@@ -28,10 +28,11 @@
 25. Create An Account Toggle Js
 26. Shipping Box Toggle Js
 27. Filters spoiler Js
+28. Catalog category spoilers Js
 ****************************************************/
 
 (function ($) {
-  "use strict";
+  ("use strict");
 
   ////////////////////////////////////////////////////
   // 01. PreLoader Js
@@ -1148,14 +1149,37 @@
       type: "iframe",
     });
   }
-})(jQuery);
 
-////////////////////////////////////////////////////
-// 27. Filters spoiler Js
-$("[data-filter-more-button]").on("click", function () {
-  $(this).toggleClass("active");
-  $(this).hasClass("active")
-    ? $(this).text("Скрыть")
-    : $(this).text("Показать все");
-  $(this).prev().slideToggle(250);
-});
+  ////////////////////////////////////////////////////
+  // 27. Filters spoiler Js
+  $("[data-filter-more-button]").on("click", function () {
+    $(this).toggleClass("active");
+    $(this).hasClass("active")
+      ? $(this).text("Скрыть")
+      : $(this).text("Показать все");
+    $(this).prev().slideToggle(250);
+  });
+
+  ////////////////////////////////////////////////////
+  // 28. Catalog category accordion only one open
+  const productCategoryToggles = document.querySelectorAll(
+    "[data-product-category-toggle]"
+  );
+  if (productCategoryToggles.length) {
+    productCategoryToggles.forEach((item) =>
+      item.addEventListener("click", () => {
+        const parent = item.parentNode;
+
+        if (parent.classList.contains("active")) {
+          parent.classList.remove("active");
+        } else {
+          document
+            .querySelectorAll("[data-product-category-item]")
+            .forEach((child) => child.closest("li").classList.remove("active"));
+
+          parent.classList.add("active");
+        }
+      })
+    );
+  }
+})(jQuery);
