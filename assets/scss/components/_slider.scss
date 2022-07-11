@@ -6,6 +6,13 @@
 .slider {
   &__area {
     @include background();
+
+    &-wrapper {
+      @media (max-width: 1199.98px) {
+        flex-direction: column-reverse;
+        gap: 22px;
+      }
+    }
   }
   &__inner {
     & .slick-dots {

@@ -2084,6 +2084,12 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 1199.98px) {
+  .slider__area-wrapper {
+    flex-direction: column-reverse;
+    gap: 22px;
+  }
+}
 .slider__inner .slick-dots {
   position: absolute;
   bottom: 10px;

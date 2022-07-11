@@ -57,22 +57,6 @@ const DOM = {
   });
 
   ////////////////////////////////////////////////////
-  // 02. Mobile Menu Js
-  $("#mobile-menu").meanmenu({
-    meanMenuContainer: ".mobile-menu",
-    meanScreenWidth: "1199",
-    meanExpand: ['<i class="fal fa-plus"></i>'],
-  });
-
-  ////////////////////////////////////////////////////
-  // 02. Mobile Menu Js
-  $("#mobile-menu-2").meanmenu({
-    meanMenuContainer: ".mobile-menu-2",
-    meanScreenWidth: "767",
-    meanExpand: ['<i class="fal fa-plus"></i>'],
-  });
-
-  ////////////////////////////////////////////////////
   // 02. Search Js
   $(".search-toggle").on("click", function () {
     $(".header__search").addClass("search-opened");
@@ -1215,11 +1199,13 @@ const DOM = {
     DOM.header.classList.toggle(CLASSES.openMenu);
     DOM.body.classList.toggle(CLASSES.scrollHidden);
     DOM.overlay.classList.toggle(CLASSES.active);
+    burgerBtn.classList.toggle(CLASSES.active);
 
     if (DOM.header.classList.contains(CLASSES.openSearch)) {
       DOM.header.classList.remove(CLASSES.openSearch);
       DOM.body.classList.add(CLASSES.scrollHidden);
       DOM.overlay.classList.add(CLASSES.active);
+      burgerBtn.classList.add(CLASSES.active);
     }
   }
 
@@ -1240,6 +1226,7 @@ const DOM = {
       DOM.header.classList.remove(CLASSES.openMenu);
       DOM.body.classList.add(CLASSES.scrollHidden);
       DOM.overlay.classList.add(CLASSES.active);
+      burgerBtn.classList.remove(CLASSES.active);
     }
   }
 
