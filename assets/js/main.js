@@ -29,7 +29,23 @@
 26. Shipping Box Toggle Js
 27. Filters spoiler Js
 28. Catalog category spoilers Js
+29. Burger Menu Js
+30. Burger search Js
 ****************************************************/
+const CLASSES = {
+  active: "active",
+  loading: "loading",
+  openMenu: "open-menu",
+  openSearch: "open-search",
+  scrollHidden: "scroll-hidden",
+  scroll: "scroll",
+};
+
+const DOM = {
+  body: document.querySelector("body"),
+  header: document.querySelector("#header"),
+  overlay: document.querySelector("#overlay"),
+};
 
 (function ($) {
   ("use strict");
@@ -1161,7 +1177,7 @@
   });
 
   ////////////////////////////////////////////////////
-  // 28. Catalog category accordion only one open
+  // 28. Catalog category spoilers Js
   const productCategoryToggles = document.querySelectorAll(
     "[data-product-category-toggle]"
   );
@@ -1182,4 +1198,51 @@
       })
     );
   }
+
+  ////////////////////////////////////////////////////
+  // 29. Burger menu Js
+  const burgerBtn = document.querySelector("#burger-button");
+
+  function closeHeaderMenu() {
+    DOM.body.classList.remove(CLASSES.scrollHidden);
+    DOM.overlay.classList.remove(CLASSES.active);
+    burgerBtn.classList.remove(CLASSES.active);
+    DOM.header.classList.remove(CLASSES.openMenu);
+    DOM.header.classList.remove(CLASSES.openSearch);
+  }
+
+  function toggleHeaderMenu() {
+    DOM.header.classList.toggle(CLASSES.openMenu);
+    DOM.body.classList.toggle(CLASSES.scrollHidden);
+    DOM.overlay.classList.toggle(CLASSES.active);
+
+    if (DOM.header.classList.contains(CLASSES.openSearch)) {
+      DOM.header.classList.remove(CLASSES.openSearch);
+      DOM.body.classList.add(CLASSES.scrollHidden);
+      DOM.overlay.classList.add(CLASSES.active);
+    }
+  }
+
+  burgerBtn.addEventListener("click", toggleHeaderMenu);
+  overlay.addEventListener("click", closeHeaderMenu);
+
+  ////////////////////////////////////////////////////
+  // 30. Burger search Js
+  const burgerSearch = document.querySelector("#search-button");
+  const burgerSearchClose = document.querySelector("#search-close");
+
+  function toggleHeaderSearch() {
+    DOM.header.classList.toggle(CLASSES.openSearch);
+    DOM.body.classList.toggle(CLASSES.scrollHidden);
+    DOM.overlay.classList.toggle(CLASSES.active);
+
+    if (DOM.header.classList.contains(CLASSES.openMenu)) {
+      DOM.header.classList.remove(CLASSES.openMenu);
+      DOM.body.classList.add(CLASSES.scrollHidden);
+      DOM.overlay.classList.add(CLASSES.active);
+    }
+  }
+
+  burgerSearch.addEventListener("click", toggleHeaderSearch);
+  burgerSearchClose.addEventListener("click", closeHeaderMenu);
 })(jQuery);

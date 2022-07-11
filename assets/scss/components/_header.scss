@@ -7,7 +7,28 @@
 .header {
   background-color: $white;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+
+  @media (max-width: 991.98px) {
+    position: sticky;
+    z-index: 9;
+    top: 0;
+
+    &.open-menu {
+      .header__menu {
+        display: flex;
+      }
+    }
+
+    &.open-search {
+      .header__search {
+        display: flex;
+      }
+    }
+  }
   &__logo {
+    @media (max-width: 991.98px) {
+      max-width: 110px;
+    }
   }
   &__buttons {
     display: none;
@@ -24,12 +45,31 @@
     justify-content: space-between;
     align-items: center;
     padding: 22px 0;
+    @media (max-width: 991.98px) {
+      padding: 10px 0;
+    }
   }
   &__menu {
     display: flex;
 
     @media (max-width: 991.98px) {
       display: none;
+
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      overflow-y: auto;
+      max-height: calc(100vh - 70px);
+      padding: 30px 0;
+      border-top: 1px solid $grey;
+      background-color: $white;
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
     }
   }
   &__padding {
@@ -204,6 +244,10 @@
     }
   }
   &__search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
     // margin-right: 69px;
     max-width: 426px;
     width: 100%;
@@ -233,13 +277,17 @@
         border: 2px solid $t-yellow;
         outline: none;
         padding: 0 15px;
-        padding-right: 190px;
+        padding-right: 140px;
         @media #{$xs} {
           padding-left: 15px;
         }
         &::placeholder {
           color: $t-text-3;
           font-size: 12px;
+        }
+
+        @media (max-width: 991.98px) {
+          height: 35px;
         }
       }
       & button {
@@ -260,6 +308,11 @@
 
         @media (max-width: 1399.98px) {
           padding: 0 20px;
+        }
+
+        @media (max-width: 991.98px) {
+          height: 35px;
+          line-height: 1;
         }
       }
       &-4 {
@@ -315,12 +368,32 @@
       }
     }
 
+    &-close {
+      display: none;
+      background-image: url("../img/svg/close.svg");
+      height: 25px;
+      width: 25px;
+
+      @media (max-width: 991.98px) {
+        display: block;
+      }
+    }
+
     @media (max-width: 1399.98px) {
       max-width: 300px;
     }
 
     @media (max-width: 991.98px) {
       display: none;
+
+      position: absolute;
+      top: 70px;
+      left: 0;
+      max-width: unset;
+      width: 100%;
+      padding: 10px 13px;
+      border-top: 1px solid $grey;
+      background-color: $white;
     }
   }
   &__currency {
