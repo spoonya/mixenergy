@@ -48,135 +48,106 @@
   </div>
   <!-- back to top end -->
 
+  <div id="overlay" class="overlay"></div>
+
   <!-- header area start -->
-  <header>
-    <div class="header__area">
-      <div class="header__info header__padding">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-xl-4 col-lg-3">
-              <div class="header__info-left d-flex justify-content-center justify-content-sm-between align-items-center">
-                <div class="logo">
-                  <a href="index.html"><img src="assets/img/logo/logo-black.png" alt="logo"></a>
-                </div>
-                <div class="header__hotline align-items-center d-none d-sm-flex  d-lg-none d-xl-flex">
-                  <div class="header__hotline-icon">
-                    <i class="fal fa-headset"></i>
-                  </div>
-                  <div class="header__hotline-info">
-                    <span>Консультация:</span>
-                    <a href="tel:+375292255226">+375 (29) 225-52-26</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-8 col-lg-9">
-              <div class="header__info-right">
-                <div class="header__search f-left d-none d-sm-block">
-                  <form action="#">
-                    <div class="header__search-box">
-                      <input type="text">
-                      <button type="submit">Поиск</button>
-                    </div>
-                    <div class="header__search-cat">
-                      <select>
-                        <option>Все категории</option>
-                        <option>Светильники</option>
-                        <option>Лампы</option>
-                        <option>Стабилизаторы напряжения</option>
-                        <option>Кабель и провода</option>
-                        <option>Запорная арматураl</option>
-                        <option>Водонагреватели</option>
-                        <option>Смесители и комплектующие</option>
-                        <option>Ванны</option>
-                        <option>Поддоны</option>
-                      </select>
-                    </div>
-                  </form>
-                </div>
-                <ul class="header__links">
-                  <li>
-                    <a href="#">Избранное</a>
-                  </li>
-                </ul>
-                <div class="cart__mini-wrapper d-none d-md-flex f-right p-relative">
-                  <a href="javascript:void(0);" class="cart__toggle">
-                    <span class="cart__total-item">01</span>
-                  </a>
-                  <span class="cart__content">
-                    <span class="cart__my">Корзина:</span>
-                    <span class="cart__total-price">120 BYN</span>
-                  </span>
-                  <div class="cart__mini">
-                    <div class="cart__close"><button type="button" class="cart__close-btn"><i class="fal fa-times"></i></button></div>
-                    <ul>
-                      <li>
-                        <div class="cart__title">
-                          <h4>Моя корзина</h4>
-                          <span>(1 Товар в корзине)</span>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="cart__item d-flex justify-content-between align-items-center">
-                          <div class="cart__inner d-flex">
-                            <div class="cart__thumb">
-                              <a href="product-details.html">
-                                <img src="assets/img/shop/product/cart/cart-mini-1.jpg" alt="">
-                              </a>
-                            </div>
-                            <div class="cart__details">
-                              <h6><a href="product-details.html"> Samsung C49J89: £875, Debenhams Plus </a></h6>
-                              <div class="cart__price">
-                                <span>600 BYN</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cart__del">
-                            <a href="#"><i class="fal fa-trash-alt"></i></a>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="cart__sub d-flex justify-content-between align-items-center">
-                          <h6>Итого</h6>
-                          <span class="cart__sub-total">600 BYN</span>
-                        </div>
-                      </li>
-                      <li>
-                        <a href="checkout.html" class="t-y-btn w-100 mb-10">Перейти к оформлению</a>
-                        <a href="cart.html" class="t-y-btn t-y-btn-border w-100 mb-10">Подробнее</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+  <header class="header" id="header">
+    <div class="header__padding">
+      <div class="container-fluid">
+        <div class="header__inner">
+          <div class="header__buttons">
+            <button class="burger-button" id="burger-button" aria-label="Меню"><span></span></button>
+            <button class="search-button" id="search-button">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.78627 0.0595101C5.96916 0.204911 4.63738 0.708576 3.89201 1.15412C2.94473 1.72036 1.73884 2.92746 1.17317 3.87571C0.682397 4.69845 0.211587 6.00357 0.0652 6.94745C0.00591278 7.32954 -0.0160582 8.00165 0.0122776 8.56204C0.258145 13.4152 4.72657 16.993 9.49945 16.158C10.7544 15.9385 12.0253 15.4059 12.941 14.7156L13.385 14.3809L16.1198 17.1196C17.624 18.6258 18.9612 19.9023 19.0914 19.9564C19.5918 20.1638 20.1636 19.5914 19.9564 19.0905C19.9024 18.9601 18.6271 17.6216 17.1225 16.1159L14.3866 13.3783L14.721 12.9338C14.9049 12.6895 15.1945 12.2145 15.3646 11.8785C17.7254 7.21521 15.3457 1.74061 10.3173 0.266963C9.69265 0.0838599 9.30153 0.030622 8.39923 0.00557396C7.77585 -0.0117065 7.05001 0.012556 6.78627 0.0595101ZM9.75063 1.5925C10.5614 1.78416 11.7932 2.40538 12.4595 2.95871C13.4699 3.79768 14.3334 5.16974 14.6953 6.51107C14.9049 7.28782 14.9002 9.04249 14.6865 9.82247C13.6182 13.7221 9.58594 15.828 5.8178 14.4543C4.26543 13.8885 2.89965 12.68 2.16423 11.2217C0.0665951 7.06213 2.65526 2.10324 7.2658 1.44893C7.92441 1.35546 9.01399 1.41839 9.75063 1.5925Z" fill="#222222" />
+              </svg>
+            </button>
+          </div>
+          <div class="header__logo">
+            <div class="logo">
+              <a href="index.html"><img src="assets/img/logo/logo-black.png" alt="logo"></a>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="header__bottom header__bottom-border header__padding">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-6 col-6">
-              <div class="header__bottom-left d-flex d-xl-block align-items-center">
-                <div class="side-menu d-xl-none mr-20">
-                  <button type="button" class="side-menu-btn offcanvas-toggle-btn"><i class="fas fa-bars"></i></button>
-                </div>
-                <div class="main-menu d-none d-md-block">
-                  <nav id="mobile-menu-2">
-                    <ul>
-                      <li>
-                        <a href="product.html">Каталог</a>
-                      </li>
-                      <li>
-                        <a href="about.html">О нас</a>
-                      </li>
-                      <li>
-                        <a href="contact.html">Контакты</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
+          <nav class="header__menu main-menu">
+            <ul>
+              <li>
+                <a href="product.html">Каталог</a>
+              </li>
+              <li>
+                <a href="about.html">О нас</a>
+              </li>
+              <li>
+                <a href="contact.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__search">
+            <form action="#">
+              <div class="header__search-box">
+                <input type="text">
+                <button type="submit">Поиск</button>
+              </div>
+            </form>
+            <button id="search-close" class="header__search-close"></button>
+          </div>
+          <div class="header__info">
+            <div class="header__hotline">
+              <div class="header__hotline-icon">
+                <i class="fal fa-headset"></i>
+              </div>
+              <div class="header__hotline-info">
+                <span>Консультация:</span>
+                <a href="tel:+375292255226">+375 (29) 225-52-26</a>
+              </div>
+            </div>
+            <div class="cart__mini-wrapper d-flex p-relative">
+              <a href="javascript:void(0);" class="cart__toggle">
+                <span class="cart__total-item">01</span>
+              </a>
+              <span class="cart__content">
+                <span class="cart__my">Корзина:</span>
+                <span class="cart__total-price">120 BYN</span>
+              </span>
+              <div class="cart__mini">
+                <div class="cart__close"><button type="button" class="cart__close-btn"><i class="fal fa-times"></i></button></div>
+                <ul>
+                  <li>
+                    <div class="cart__title">
+                      <h4>Моя корзина</h4>
+                      <span>(1 Товар в корзине)</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="cart__item d-flex justify-content-between align-items-center">
+                      <div class="cart__inner d-flex">
+                        <div class="cart__thumb">
+                          <a href="product-details.html">
+                            <img src="assets/img/shop/product/cart/cart-mini-1.jpg" alt="">
+                          </a>
+                        </div>
+                        <div class="cart__details">
+                          <h6><a href="product-details.html"> Samsung C49J89: £875, Debenhams Plus </a></h6>
+                          <div class="cart__price">
+                            <span>600 BYN</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart__del">
+                        <a href="#"><i class="fal fa-trash-alt"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="cart__sub d-flex justify-content-between align-items-center">
+                      <h6>Итого</h6>
+                      <span class="cart__sub-total">600 BYN</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="checkout.html" class="t-y-btn w-100 mb-10">Перейти к оформлению</a>
+                    <a href="cart.html" class="t-y-btn t-y-btn-border w-100 mb-10">Подробнее</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -245,184 +216,135 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="checkbox-form">
-                <h3>Платёжные реквизиты</h3>
+                <h3>Оформление заказа</h3>
                 <div class="row">
+                  <div class="col-md-6">
+                    <div class="checkout-form-list">
+                      <label>Ваше имя <span class="required">*</span>
+                        <input type="text" placeholder="" />
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="checkout-form-list">
+                      <label>Телефон <span class="required">*</span>
+                        <input type="text" placeholder="" />
+                      </label>
+                    </div>
+                  </div>
+                  <div class="checkout-form-radios">
+                    <p class="checkout-form-radios__title">Способ доставки</p>
+                    <div class="checkout-form-radios__item">
+                      <label class="checkbox">
+                        <input class="checkbox__input" name="shipment" type="radio" value="0" required="" hidden="">
+                        <span class="checkbox__styled"></span>
+                        <span class="checkbox__text">Самовывоз</span>
+                      </label>
+                      <div class="checkout-form-radios__text">
+                        <p>ул. Артиллеристов, дом № 8, корпус 3, офис 17</p>
+                      </div>
+                    </div>
+                    <div class="checkout-form-radios__item">
+                      <label class="checkbox">
+                        <input class="checkbox__input" name="shipment" type="radio" value="1" required="" hidden="">
+                        <span class="checkbox__styled"></span>
+                        <span class="checkbox__text">Доставка по г. Минску</span>
+                      </label>
+                      <div class="checkout-form-radios__text">
+                        <p>При сумме заказа от 300 руб. доставка - <b>бесплатно</b>!</p>
+                        <p>При заказе до 300 рублей стоимость доставки обсуждается с менеджером.</p>
+                      </div>
+                    </div>
+                    <div class="checkout-form-radios__item">
+                      <label class="checkbox">
+                        <input class="checkbox__input" name="shipment" type="radio" value="2" required="" hidden="">
+                        <span class="checkbox__styled"></span>
+                        <span class="checkbox__text">Доставка в другие регионы</span>
+                      </label>
+                      <div class="checkout-form-radios__text">
+                        <p>Стоимость доставки в другие регионы страны обсуждается с менеджером.</p>
+                      </div>
+                    </div>
+                  </div>
                   <div class="col-md-12">
                     <div class="country-select">
-                      <label>Country <span class="required">*</span></label>
+                      <label>Город <span class="required">*</span></label>
                       <select>
-                        <option value="volvo">bangladesh</option>
-                        <option value="saab">Algeria</option>
-                        <option value="mercedes">Afghanistan</option>
-                        <option value="audi">Ghana</option>
-                        <option value="audi2">Albania</option>
-                        <option value="audi3">Bahrain</option>
-                        <option value="audi4">Colombia</option>
-                        <option value="audi5">Dominican Republic</option>
+                        <option value="minsk">Минск</option>
+                        <option value="grodno">Гродно</option>
+                        <option value="gomel">Гомель</option>
+                        <option value="mogilev">Могилев</option>
+                        <option value="brest">Брест</option>
+                        <option value="vitebsk">Витебск</option>
                       </select>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="checkout-form-list">
-                      <label>First Name <span class="required">*</span></label>
-                      <input type="text" placeholder="" />
+                      <label>Улица <span class="required">*</span>
+                        <input type="text" placeholder="" />
+                      </label>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-2 col-sm-4">
                     <div class="checkout-form-list">
-                      <label>Last Name <span class="required">*</span></label>
-                      <input type="text" placeholder="" />
+                      <label>Дом <span class="required">*</span>
+                        <input type="number" placeholder="" />
+                      </label>
                     </div>
                   </div>
-                  <div class="col-md-12">
+                  <div class="col-md-2 col-sm-4">
                     <div class="checkout-form-list">
-                      <label>Company Name</label>
-                      <input type="text" placeholder="" />
+                      <label>Корпус <span class="required">*</span>
+                        <input type="number" placeholder="" />
+                      </label>
                     </div>
                   </div>
-                  <div class="col-md-12">
+                  <div class="col-md-2 col-sm-4">
                     <div class="checkout-form-list">
-                      <label>Address <span class="required">*</span></label>
-                      <input type="text" placeholder="Street address" />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="checkout-form-list">
-                      <input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="checkout-form-list">
-                      <label>Town / City <span class="required">*</span></label>
-                      <input type="text" placeholder="Town / City" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="checkout-form-list">
-                      <label>State / County <span class="required">*</span></label>
-                      <input type="text" placeholder="" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="checkout-form-list">
-                      <label>Postcode / Zip <span class="required">*</span></label>
-                      <input type="text" placeholder="Postcode / Zip" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="checkout-form-list">
-                      <label>Email Address <span class="required">*</span></label>
-                      <input type="email" placeholder="" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="checkout-form-list">
-                      <label>Phone <span class="required">*</span></label>
-                      <input type="text" placeholder="Postcode / Zip" />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="checkout-form-list create-acc">
-                      <input id="cbox" type="checkbox" />
-                      <label>Create an account?</label>
-                    </div>
-                    <div id="cbox_info" class="checkout-form-list create-account">
-                      <p>Create an account by entering the information below. If you are a returning
-                        customer please login at the top of the page.</p>
-                      <label>Account password <span class="required">*</span></label>
-                      <input type="password" placeholder="password" />
-                    </div>
-                  </div>
-                </div>
-                <div class="different-address">
-                  <div class="ship-different-title">
-                    <h3>
-                      <label>Ship to a different address?</label>
-                      <input id="ship-box" type="checkbox" />
-                    </h3>
-                  </div>
-                  <div id="ship-box-info">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="country-select">
-                          <label>Country <span class="required">*</span></label>
-                          <select>
-                            <option value="volvo">bangladesh</option>
-                            <option value="saab">Algeria</option>
-                            <option value="mercedes">Afghanistan</option>
-                            <option value="audi">Ghana</option>
-                            <option value="audi2">Albania</option>
-                            <option value="audi3">Bahrain</option>
-                            <option value="audi4">Colombia</option>
-                            <option value="audi5">Dominican Republic</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="checkout-form-list">
-                          <label>First Name <span class="required">*</span></label>
-                          <input type="text" placeholder="" />
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="checkout-form-list">
-                          <label>Last Name <span class="required">*</span></label>
-                          <input type="text" placeholder="" />
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
-                          <label>Company Name</label>
-                          <input type="text" placeholder="" />
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
-                          <label>Address <span class="required">*</span></label>
-                          <input type="text" placeholder="Street address" />
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
-                          <input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
-                          <label>Town / City <span class="required">*</span></label>
-                          <input type="text" placeholder="Town / City" />
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="checkout-form-list">
-                          <label>State / County <span class="required">*</span></label>
-                          <input type="text" placeholder="" />
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="checkout-form-list">
-                          <label>Postcode / Zip <span class="required">*</span></label>
-                          <input type="text" placeholder="Postcode / Zip" />
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="checkout-form-list">
-                          <label>Email Address <span class="required">*</span></label>
-                          <input type="email" placeholder="" />
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="checkout-form-list">
-                          <label>Phone <span class="required">*</span></label>
-                          <input type="text" placeholder="Postcode / Zip" />
-                        </div>
-                      </div>
+                      <label>Квартира <span class="required">*</span>
+                        <input type="number" placeholder="" />
+                      </label>
                     </div>
                   </div>
                   <div class="order-notes">
                     <div class="checkout-form-list">
-                      <label>Order Notes</label>
-                      <textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                      <label>Комментарий к заказу
+                        <textarea id="checkout-mess" cols="30" rows="10" placeholder=""></textarea>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="checkout-form-radios">
+                    <p class="checkout-form-radios__title">Способ оплаты</p>
+                    <div class="checkout-form-radios__item">
+                      <label class="checkbox">
+                        <input class="checkbox__input" name="payment" type="radio" value="0" required="" hidden="">
+                        <span class="checkbox__styled"></span>
+                        <span class="checkbox__text">Наличный расчет</span>
+                      </label>
+                      <div class="checkout-form-radios__text">
+                        <p>Вы можете оплатить покупку при доставке, рассчитываясь с курьером наличными деньгами.
+                          Если вы осуществляете самовывоз, оплату необходимо будет совершить в кассе пункта выдачи заказов.</p>
+                      </div>
+                    </div>
+                    <div class="checkout-form-radios__item">
+                      <label class="checkbox">
+                        <input class="checkbox__input" name="payment" type="radio" value="1" required="" hidden="">
+                        <span class="checkbox__styled"></span>
+                        <span class="checkbox__text">Доставка по г. Минску</span>
+                      </label>
+                      <div class="checkout-form-radios__text">
+
+                      </div>
+                    </div>
+                    <div class="checkout-form-radios__item">
+                      <label class="checkbox">
+                        <input class="checkbox__input" name="payment" type="radio" value="2" required="" hidden="">
+                        <span class="checkbox__styled"></span>
+                        <span class="checkbox__text">Доставка в другие регионы</span>
+                      </label>
+                      <div class="checkout-form-radios__text">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -435,59 +357,41 @@
                   <table>
                     <thead>
                       <tr>
-                        <th class="product-name">Product</th>
-                        <th class="product-total">Total</th>
+                        <th class="product-name">Товар</th>
+                        <th class="product-total">Итого</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr class="cart_item">
                         <td class="product-name">
-                          Vestibulum suscipit <strong class="product-quantity"> × 1</strong>
+                          Лампа<strong class="product-quantity"> × 2</strong>
                         </td>
                         <td class="product-total">
-                          <span class="amount">$165.00</span>
+                          <span class="amount">165 BYN</span>
                         </td>
                       </tr>
                       <tr class="cart_item">
                         <td class="product-name">
-                          Vestibulum dictum magna <strong class="product-quantity"> × 1</strong>
+                          Кран<strong class="product-quantity"> × 1</strong>
                         </td>
                         <td class="product-total">
-                          <span class="amount">$50.00</span>
+                          <span class="amount">50 BYN</span>
                         </td>
                       </tr>
                     </tbody>
                     <tfoot>
-                      <tr class="cart-subtotal">
-                        <th>Cart Subtotal</th>
-                        <td><span class="amount">$215.00</span></td>
-                      </tr>
-                      <tr class="shipping">
-                        <th>Shipping</th>
-                        <td>
-                          <ul>
-                            <li>
-                              <input type="radio" name="shipping" />
-                              <label>
-                                Flat Rate: <span class="amount">$7.00</span>
-                              </label>
-                            </li>
-                            <li>
-                              <input type="radio" name="shipping" />
-                              <label>Free Shipping:</label>
-                            </li>
-                          </ul>
-                        </td>
-                      </tr>
                       <tr class="order-total">
-                        <th>Order Total</th>
-                        <td><strong><span class="amount">$215.00</span></strong>
+                        <th>Итоговая стоимость</th>
+                        <td><strong><span class="amount">215 BYN</span></strong>
                         </td>
                       </tr>
                     </tfoot>
                   </table>
                 </div>
-
+                <div class="your-order__buttons">
+                  <button class="t-y-btn w-100 mb-10" type="submit">Оформить заказ</button>
+                  <a class="t-y-btn t-y-btn-border w-100 mb-10" href="cart.html">Вернуться в корзину</a>
+                </div>
               </div>
             </div>
           </div>

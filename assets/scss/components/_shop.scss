@@ -70,6 +70,7 @@
       font-weight: 500;
       line-height: 17px;
       padding: 14px;
+      color: $black;
       border-bottom: 1px solid #ebebeb;
 
       transition: color 0.1s, border-bottom 0.25s;
@@ -2067,10 +2068,11 @@ p.checkout-coupon input[type="text"] {
 }
 
 .country-select .nice-select {
-  border: 1px solid #eaedff;
+  border: 1px solid $t-yellow;
   height: 45px;
   padding-left: 10px;
   width: 100%;
+  border-radius: 3px;
   color: #6f7172;
   margin-bottom: 20px;
 }
@@ -2081,22 +2083,35 @@ p.checkout-coupon input[type="text"] {
 
 .checkout-form-list {
   margin-bottom: 30px;
+
+  @media (max-width: 991.98px) {
+    margin-bottom: 15px;
+  }
 }
 
 .checkout-form-list label {
   color: #6f7172;
 }
 
+.checkout-form-list {
+  input,
+  textarea {
+    border-radius: 3px;
+    margin-top: 5px;
+  }
+}
+
 .checkout-form-list input[type="text"],
+.checkout-form-list input[type="number"],
 .checkout-form-list input[type="password"],
-.checkout-form-list input[type="email"] {
+.checkout-form-list input[type="email"],
+.checkout-form-list textarea {
   background: #ffffff;
-  border: 1px solid #eaedff;
-  border-radius: 0;
+  border: 1px solid $t-yellow;
   height: 45px;
-  padding: 0 0 0 10px;
+  padding: 0 10px;
   width: 100%;
-  outline: none;
+  outline: 0;
   @include box-shadow(none);
   &:focus {
     border-color: $black;
@@ -2104,6 +2119,7 @@ p.checkout-coupon input[type="text"] {
 }
 
 .checkout-form-list input[type="text"]::-moz-placeholder,
+.checkout-form-list input[type="number"]::-moz-placeholder,
 .checkout-form-list input[type="password"]::-moz-placeholder,
 .checkout-form-list input[type="email"]::-moz-placeholder {
   color: #6f7172;
@@ -2111,10 +2127,21 @@ p.checkout-coupon input[type="text"] {
 }
 
 .checkout-form-list input[type="text"]::placeholder,
+.checkout-form-list input[type="number"]::placeholder,
 .checkout-form-list input[type="password"]::placeholder,
 .checkout-form-list input[type="email"]::placeholder {
   color: #6f7172;
   opacity: 1;
+}
+
+.checkout-form-list input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.checkout-form-list input[type="number"]::-webkit-outer-spin-button,
+.checkout-form-list input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .checkout-form-list input[type="checkbox"] {
@@ -2140,7 +2167,6 @@ p.checkout-coupon input[type="text"] {
 }
 
 .order-notes textarea {
-  border: 1px solid #eaedff;
   height: 90px;
   padding: 15px;
   width: 100%;
@@ -2169,8 +2195,36 @@ p.checkout-coupon input[type="text"] {
 }
 
 .your-order {
-  padding: 30px 40px 45px;
-  border: 3px solid #eaedff;
+  padding: 40px 18px 92px 40px;
+  background: #fafafa;
+
+  @media (max-width: 991.98px) {
+    padding: 20px;
+  }
+  border-radius: 3px;
+
+  &__buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 60px;
+    max-width: 469px;
+
+    a,
+    button {
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: none;
+      padding: 0 40px;
+
+      @media (max-width: 1199.98px) {
+        padding: 0 10px;
+      }
+    }
+
+    @media (max-width: 479.98px) {
+      flex-direction: column;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -2198,7 +2252,7 @@ p.checkout-coupon input[type="text"] {
   border-bottom: 1px solid #eaedff;
   border-right: medium none;
   color: #6f7172;
-  font-size: 14px;
+  font-size: 16px;
   padding: 15px 0;
   text-align: left;
 }
@@ -2212,7 +2266,7 @@ p.checkout-coupon input[type="text"] {
 
 .your-order-table table th {
   border-top: medium none;
-  color: #6f7172;
+  color: $black;
   font-weight: normal;
   text-align: left;
   vertical-align: middle;
@@ -2239,7 +2293,12 @@ p.checkout-coupon input[type="text"] {
 
 .your-order-table table .order-total th {
   border-bottom: 0;
-  font-size: 14px;
+  font-size: 24px;
+  color: $black;
+
+  @media (max-width: 767.98px) {
+    font-size: 16px;
+  }
 }
 
 .your-order-table table .order-total td {
@@ -2253,6 +2312,7 @@ p.checkout-coupon input[type="text"] {
 .your-order-table table tr.order-total td span {
   color: $black;
   font-size: 18px;
+  white-space: nowrap;
   font-weight: 500;
 }
 
@@ -2429,5 +2489,55 @@ p.checkout-coupon input[type="text"] {
 .pro-cart-btn {
   .t-y-btn {
     padding: 0 40px;
+  }
+}
+
+.checkout-form-radios {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    color: $black;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    padding-top: 10px;
+    padding-left: 25px;
+
+    p {
+      margin-bottom: 0;
+      color: #7c7e7f;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+        line-height: 17px;
+      }
+
+      b {
+        font-weight: 400;
+        color: $black;
+      }
+    }
+  }
+}
+
+.checkbox-form {
+  @media (max-width: 991.98px) {
+    margin-bottom: 30px;
+  }
+}
+
+.checkout-area {
+  @media (max-width: 991.98px) {
+    padding-bottom: 0;
   }
 }
