@@ -13,6 +13,13 @@
         gap: 22px;
       }
     }
+
+    @media (max-width: 1199.98px) {
+      .custom-col-2 {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+    }
   }
   &__inner {
     & .slick-dots {

@@ -244,9 +244,6 @@
     }
   }
   &__search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 15px;
     // margin-right: 69px;
     max-width: 426px;
@@ -389,6 +386,9 @@
       position: absolute;
       top: 70px;
       left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       max-width: unset;
       width: 100%;
       padding: 10px 13px;
