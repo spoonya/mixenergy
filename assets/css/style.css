@@ -601,6 +601,12 @@ p {
   overflow: hidden;
 }
 
+@media (max-width: 1199.98px) {
+  .cat__menu-wrapper {
+    display: none;
+  }
+}
+
 /*----------------------------------------*/
 /*  00. BUTTONS CSS START
 /*----------------------------------------*/
@@ -1943,7 +1949,6 @@ p {
     position: absolute;
     top: 70px;
     left: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
     max-width: unset;
@@ -2084,10 +2089,17 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.slider__area-wrapper .product__category {
+  display: none;
+  margin-bottom: 10px;
+}
 @media (max-width: 1199.98px) {
   .slider__area-wrapper {
     flex-direction: column-reverse;
     gap: 22px;
+  }
+  .slider__area-wrapper .product__category {
+    display: block;
   }
 }
 @media (max-width: 1199.98px) {
@@ -2533,6 +2545,7 @@ p {
 /*  06. SHOP CSS START
 /*----------------------------------------*/
 .product__category {
+  background-color: #ffffff;
   font-size: 14px;
   margin-bottom: 35px;
   border: 1px solid #ebebeb;

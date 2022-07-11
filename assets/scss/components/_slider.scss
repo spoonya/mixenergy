@@ -8,9 +8,18 @@
     @include background();
 
     &-wrapper {
+      .product__category {
+        display: none;
+        margin-bottom: 10px;
+      }
+
       @media (max-width: 1199.98px) {
         flex-direction: column-reverse;
         gap: 22px;
+
+        .product__category {
+          display: block;
+        }
       }
     }
 

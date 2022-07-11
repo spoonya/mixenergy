@@ -637,3 +637,9 @@ p {
 .scroll-hidden {
   overflow: hidden;
 }
+
+.cat__menu-wrapper {
+  @media (max-width: 1199.98px) {
+    display: none;
+  }
+}
