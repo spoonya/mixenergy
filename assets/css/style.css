@@ -500,7 +500,7 @@ p {
 }
 
 .logo {
-  max-width: 196px;
+  max-width: 195px;
 }
 .logo a,
 .logo img {
@@ -512,9 +512,70 @@ p {
     max-width: 148px;
   }
 }
+@media (max-width: 480.98px) {
+  .logo {
+    max-width: 120px;
+  }
+}
 
 .page-title {
   font-size: 34px;
+}
+
+.burger-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  width: 40px;
+  height: 30px;
+}
+.burger-button span {
+  position: relative;
+  width: 25px;
+  height: 2px;
+  background-color: #222;
+  border-radius: 4px;
+}
+.burger-button span::before,
+.burger-button span::after {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: inherit;
+  border-radius: inherit;
+}
+.burger-button span::before, .burger-button span::after {
+  display: block;
+  content: "";
+  transition: transform 0.15s;
+}
+.burger-button span::before {
+  transform: translateY(-7px);
+}
+.burger-button span::after {
+  transform: translateY(7px);
+  width: 25px;
+  right: 0;
+}
+.burger-button.active span {
+  height: 0;
+}
+.burger-button.active span::before {
+  transform: rotate(-45deg);
+}
+.burger-button.active span::after {
+  transform: rotate(45deg);
+  width: 100%;
+}
+
+.cart__mini-wrapper .cart__content {
+  display: none;
+}
+@media (max-width: 991.98px) {
+  .cart__mini-wrapper .cart__toggle {
+    margin-right: 0;
+  }
 }
 
 /*----------------------------------------*/
@@ -600,20 +661,13 @@ p {
 /*  00. MENU CSS START
 /*----------------------------------------*/
 /* main menu area */
+.main-menu ul {
+  display: flex;
+  gap: 50px;
+}
 .main-menu ul li {
   display: inline-block;
-  margin-right: 50px;
   position: relative;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .main-menu ul li {
-    margin-right: 30px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .main-menu ul li {
-    margin-right: 30px;
-  }
 }
 .main-menu ul li:hover > a {
   color: #0a9aee;
@@ -629,7 +683,6 @@ p {
   color: #222;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 19px 0;
 }
 .main-menu ul li ul.submenu {
   position: absolute;
@@ -678,6 +731,16 @@ p {
   visibility: visible;
   opacity: 1;
   left: 100%;
+}
+@media (max-width: 1399.98px) {
+  .main-menu ul {
+    gap: 30px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .main-menu ul {
+    gap: 20px;
+  }
 }
 
 .main-menu-2 ul li:hover > a {
@@ -1470,6 +1533,35 @@ p {
 /*----------------------------------------*/
 /*  02. HEADER CSS START
 /*----------------------------------------*/
+.header {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+}
+.header__buttons {
+  display: none;
+  align-items: center;
+  gap: 15px;
+}
+@media (max-width: 991.98px) {
+  .header__buttons {
+    display: flex;
+  }
+}
+.header__inner {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+}
+.header__menu {
+  display: flex;
+}
+@media (max-width: 991.98px) {
+  .header__menu {
+    display: none;
+  }
+}
 .header__padding {
   padding-left: 75px;
   padding-right: 75px;
@@ -1580,23 +1672,11 @@ p {
   display: none;
 }
 .header__info {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border-top: 1px solid #ebebeb;
-  border-bottom: 1px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .header__info-left {
-    margin-bottom: 20px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .header__info-left {
-    margin-bottom: 20px;
-  }
-}
-.header__info-right {
-  position: relative;
+.header__hotline {
   display: flex;
   align-items: center;
 }
@@ -1635,9 +1715,14 @@ p {
     font-size: 12px;
   }
 }
+@media (max-width: 1199.98px) {
+  .header__hotline {
+    display: none;
+  }
+}
 .header__search {
-  width: 70%;
-  margin: 0 46px 0 20px;
+  max-width: 426px;
+  width: 100%;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .header__search {
@@ -1661,21 +1746,6 @@ p {
   width: 100%;
   position: relative;
 }
-.header__search-box::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 160px;
-  height: 45%;
-  width: 1px;
-  background: #e1e1e1;
-  transform: translateY(-50%);
-}
-@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
-  .header__search-box::before {
-    display: none;
-  }
-}
 .header__search-box input {
   width: 100%;
   height: 50px;
@@ -1684,7 +1754,6 @@ p {
   border: 2px solid #0a9aee;
   outline: none;
   padding: 0 15px;
-  padding-left: 180px;
   padding-right: 190px;
 }
 @media (max-width: 575px) {
@@ -1713,12 +1782,17 @@ p {
   color: #ffffff;
   display: block;
   line-height: 50px;
-  padding: 0 65px;
+  padding: 0 41px;
   font-size: 14px;
   font-weight: 400;
   background: #0a9aee;
   border-radius: 0 30px 30px 0;
   text-transform: capitalize;
+}
+@media (max-width: 1399.98px) {
+  .header__search-box button {
+    padding: 0 20px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header__search-box-4 input {
@@ -1776,18 +1850,12 @@ p {
 }
 @media (max-width: 1399.98px) {
   .header__search {
-    margin: 0 20px;
+    max-width: 300px;
   }
 }
 @media (max-width: 991.98px) {
   .header__search {
-    margin-left: 0;
-  }
-}
-@media (max-width: 767.98px) {
-  .header__search {
-    margin-left: 0;
-    margin-right: 0;
+    display: none;
   }
 }
 .header__currency {

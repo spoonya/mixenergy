@@ -7,16 +7,12 @@
 
 .main-menu {
   & ul {
+    display: flex;
+    gap: 50px;
     & li {
       display: inline-block;
-      margin-right: 50px;
       position: relative;
-      @media #{$lg} {
-        margin-right: 30px;
-      }
-      @media #{$md} {
-        margin-right: 30px;
-      }
+
       &:hover {
         & > a {
           color: $t-yellow;
@@ -33,7 +29,6 @@
         color: $black;
         font-weight: 500;
         text-transform: uppercase;
-        padding: 19px 0;
       }
       & ul.submenu {
         position: absolute;
@@ -87,6 +82,14 @@
           }
         }
       }
+    }
+
+    @media (max-width: 1399.98px) {
+      gap: 30px;
+    }
+
+    @media (max-width: 1199.98px) {
+      gap: 20px;
     }
   }
 }

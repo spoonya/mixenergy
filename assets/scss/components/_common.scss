@@ -503,7 +503,7 @@ p {
 }
 
 .logo {
-  max-width: 196px;
+  max-width: 195px;
 
   a,
   img {
@@ -514,8 +514,95 @@ p {
   @media (max-width: 1399.98px) {
     max-width: 148px;
   }
+
+  @media (max-width: 480.98px) {
+    max-width: 120px;
+  }
 }
 
 .page-title {
   font-size: 34px;
+}
+
+.burger-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+
+  width: 40px;
+  height: 30px;
+
+  span {
+    position: relative;
+
+    width: 25px;
+    height: 2px;
+
+    background-color: $black;
+
+    border-radius: 4px;
+  }
+
+  span::before,
+  span::after {
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: inherit;
+    border-radius: inherit;
+  }
+
+  span {
+    &::before,
+    &::after {
+      display: block;
+
+      content: "";
+      transition: transform 0.15s;
+    }
+
+    &::before {
+      transform: translateY(-7px);
+    }
+
+    &::after {
+      transform: translateY(7px);
+
+      width: 25px;
+
+      right: 0;
+    }
+  }
+
+  &.active {
+    span {
+      height: 0;
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+
+        width: 100%;
+      }
+    }
+  }
+}
+
+.cart__mini-wrapper {
+  .cart__content {
+    display: none;
+  }
+
+  .cart__toggle {
+    @media (max-width: 991.98px) {
+      margin-right: 0;
+    }
+  }
 }
